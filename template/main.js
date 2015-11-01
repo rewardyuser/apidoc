@@ -283,8 +283,13 @@ require([
                 }
 
                 // add prefix URL for endpoint
-                if (apiProject.url)
-                    fields.article.url = apiProject.url + fields.article.url;
+                if (apiProject.url){
+                    var baseURL = apiProject.url;
+                    if(fields.article.group == "Rewardy_POSINFOSS_API"){
+                        baseURL = "https://rewardy-posinfoss.appspot.com/posinfoss";
+                    }
+                    fields.article.url = baseURL + fields.article.url;
+                }
 
                 addArticleSettings(fields, entry);
 
