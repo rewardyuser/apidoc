@@ -118,6 +118,10 @@ define([
      */
     Handlebars.registerHelper('splitFill', function(value, splitChar, fillChar) {
         var splits = value.split(splitChar);
+        if(splits[0] == "REPLACE_WITH_NBSP"){
+            // console.log("splits->%j<-",splits);
+            return new Array(1);
+        }
         return new Array(splits.length).join(fillChar) + splits[splits.length - 1];
     });
 
