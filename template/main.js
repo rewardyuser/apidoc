@@ -286,7 +286,7 @@ require([
                 if (apiProject.url){
                     var baseURL = apiProject.url;
                     if(fields.article.group == "Rewardy_POSINFOSS_API"){
-                        baseURL = "https://rewardy-posinfoss.appspot.com/posinfoss";
+                        baseURL = "https://rewardy-posinfoss.appspot.com/posinfoss/";
                     }
                     fields.article.url = baseURL + fields.article.url;
                 }
